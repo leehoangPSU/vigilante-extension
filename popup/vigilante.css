@@ -1,0 +1,22 @@
+
+/* Change the size of the window */
+html,
+body {
+  width: 400px;
+  height: 400px;
+}
+
+/* h1 text */
+h1 {
+	font-size: 1.5em;
+}
+
+/* paragraph text */
+p {
+	font-size: 1.2em;
+}
+
+/* hide elements with this id */
+.hidden {
+  display: none;
+}

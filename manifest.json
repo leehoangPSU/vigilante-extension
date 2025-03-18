@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Vigilante",
+  "version": "1.0",
+
+  "description": "A privacy-preserving web extension that suggests privacy improvements.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  
+  "browser_action": {
+	  "default_icon": "icons/border-32.png",
+	  "default_title": "Vigilante",
+	  "default_popup": "popup/vigilante.html"
+  },
+
+  "permissions": ["storage"],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+		"matches": ["*://character.ai/privacy"],
+		"js": ["content_scripts/main.js"]
+    },
+	{
+		"matches": ["*://character.ai/"],
+		"js": ["content_scripts/helloworld.js"]
+	}
+  ]
+  
+
+}
